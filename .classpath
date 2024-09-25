@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="ejercicio1 - Wallpost/ejercicio1/src/main/java"/>
+	<classpathentry kind="src" path="ejercicio1 - Wallpost/ejercicio1/src/test/java"/>
+	<classpathentry kind="src" path="ejercicio2 - Balanza/src/main/java"/>
+	<classpathentry kind="src" path="ejercicio2 - Balanza/src/test/java"/>
+	<classpathentry kind="src" path="ejercicio3-Presupuesto/src/main/java"/>
+	<classpathentry kind="src" path="ejercicio3-Presupuesto/src/test/java"/>
+	<classpathentry kind="src" path="ejercicio4 - Balanza/src/main/java"/>
+	<classpathentry kind="src" path="ejercicio4 - Balanza/src/test/java"/>
+	<classpathentry kind="src" path="ejercicio5-Figuras/src/main/java"/>
+	<classpathentry kind="src" path="ejercicio5-Figuras/src/test/java"/>
+	<classpathentry kind="src" path="ejercicio6-Genealogia/src/main/java"/>
+	<classpathentry kind="src" path="ejercicio6-Genealogia/src/test/java"/>
+	<classpathentry kind="src" path="ejercicio7-RedAlumbrado/src/main/java"/>
+	<classpathentry kind="src" path="ejercicio7-RedAlumbrado/src/test/java"/>
+	<classpathentry kind="output" path="ejercicio1 - Wallpost/ejercicio1/target/classes"/>
+</classpath>

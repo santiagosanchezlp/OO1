@@ -71,10 +71,12 @@ public class Mamifero{
         	return this.getMadre().getMadre(); 
         return null;     
     }
-    public boolean tieneComoAncestroA(Mamifero unMamifero){
-        return (tieneAncestro(this.getPadre(), unMamifero) || tieneAncestro(this.getMadre(), unMamifero));
-    }
-    public boolean tieneAncestro(Mamifero mapapis, Mamifero unMamifero) {
-    	return ((mapapis != null) && (mapapis.equals(unMamifero)) || (mapapis.tieneComoAncestroA(unMamifero)));
+    public boolean tieneComoAncestroA(Mamifero unAncestro){
+        if (unAncestro == null)
+        	return false;
+    	if ((this.getPadre() == unAncestro) || ((this.getMadre() == unAncestro)))
+        	return true;
+        return (this.getPadre() != null && this.getPadre().tieneComoAncestroA(unAncestro) || 
+        		this.getMadre() != null && this.getMadre().tieneComoAncestroA(unAncestro));
     }
 }
