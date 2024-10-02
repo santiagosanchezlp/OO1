@@ -28,18 +28,23 @@ public class InversorTest {
 		accion1.setCotizacion(50);
 		accion2.setCotizacion(100);
 		accion3.setCotizacion(1000);
-		
+		accion1.compra(10);
+		accion2.compra(20);
+		accion3.compra(100);
 		PF1 = new PlazoFijo (1000, 0.02);
 		PF2 = new PlazoFijo(2000, 0.01);
+		Santi.compra(accion1);
+		Rodri.compra(accion2);
+		Sebas.compra(accion3);
+		Santi.constituirPlazoFijo(1000, 20);
+		Rodri.agregarPlazoFijo(PF1);
+		Sebas.agregarPlazoFijo(PF2);
 	}
 	
     @Test
-    public void testAlta() {
-        assertEquals(0, accion1.getCantidad());
-        assertEquals(0, accion2.getCantidad());
-        assertEquals(0, accion3.getCantidad());
-        assertEquals(50, accion1.getCotizacion());
-        assertEquals(100, accion2.getCotizacion());
-        assertEquals(1000, accion3.getCotizacion());
+    public void tesValorActual() {
+        assertEquals(1500, Santi.valorActual());
+        assertEquals(3000, Rodri.valorActual());
+        assertEquals(102000, Sebas.valorActual());
     }
 }

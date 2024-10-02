@@ -1,6 +1,6 @@
 package ar.edu.unlp.info.oo1.ejercicio11_Inversor;
 
-public class InversionEnAcciones extends Inversiones{
+public class InversionEnAcciones implements Inversiones{
 	private String nombre;
 	private int cantidad;
 	private double valorUnitario;

@@ -3,7 +3,7 @@ package ar.edu.unlp.info.oo1.ejercicio11_Inversor;
 import java.time.LocalDate;
 import static java.time.temporal.ChronoUnit.DAYS;
 
-public class PlazoFijo extends Inversiones {
+public class PlazoFijo implements Inversiones {
 	private LocalDate fechaDeConstitucion;
 	private double montoDepositado;
 	private double porcentajeDeInteresDiario;

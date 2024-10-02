@@ -1,6 +1,5 @@
 package ar.edu.unlp.info.oo1.ejercicio11_Inversor;
 
-import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -12,22 +11,12 @@ public class Inversor {
 		this.nombre = nombre;
 		this.inversiones = new ArrayList<Inversiones>();
 	}
-	
-	public void compra(String unaEspecie, int unaCantidad) {
-		//como hago que este metodo aplique solo a acciones?
-		InversionEnAcciones accionBuscada = inversiones.stream().filter(accion->accion.getEspecie().equals(unaEspecie));
-		if (accionBuscada == null) {
-			accionBuscada = new InversionEnAcciones(unaEspecie);
-			inversiones.add(accionBuscada);
-		}
-		accionBuscada.compra(unaCantidad);
+	public void compra(InversionEnAcciones unaAccion) {
+			inversiones.add(unaAccion);
 	}
-	public boolean venta(String unaEspecie, int unaCantidad) {
-		//como hago que este metodo aplique solo a acciones?
-		InversionEnAcciones accionBuscada = inversiones.stream().filter(accion->accion.getEspecie().equals(unaEspecie));
-		if (accionBuscada == null)
-			return false;
-		return accionBuscada.venta(unaCantidad);
+
+	public void venta(InversionEnAcciones unaAccion) {
+		inversiones.remove(unaAccion);
 	}
 	
 	public void constituirPlazoFijo(double unMonto, double unaTasa) {
@@ -37,6 +26,12 @@ public class Inversor {
 	
 	public double valorActual() {
 		return inversiones.stream().mapToDouble(inversiones -> inversiones.valorActual()).sum();
+	}
+	public void agregarPlazoFijo(PlazoFijo unPlazoFijo) {
+		inversiones.add(unPlazoFijo);
+	}
+	public void eliminarPlazoFijo(PlazoFijo unPlazoFijo) {
+		inversiones.remove(unPlazoFijo);
 	}
 	
 }

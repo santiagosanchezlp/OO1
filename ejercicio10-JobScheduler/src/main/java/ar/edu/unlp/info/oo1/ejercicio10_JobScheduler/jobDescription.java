@@ -1,11 +1,28 @@
 package ar.edu.unlp.info.oo1.ejercicio10_JobScheduler;
 
-public class jobDescription {
-	private String description;
+public class JobDescription {
+
 	private double effort;
+
 	private int priority;
-		
-	public jobDescription() {
-		
+
+	private String description;
+
+	public JobDescription (double anEffort, int aPriority, String aDescription) {
+		this.effort = anEffort;
+		this.priority = aPriority;
+		this.description = aDescription;
+	}
+
+	public double getEffort() {
+			return effort;
+	}
+
+	public int getPriority() {
+		return priority;
+	}
+
+	public String getDescription() {
+		return this.description;
 	}
 }
