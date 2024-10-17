@@ -1,4 +1,4 @@
-package ar.edu.unlp.info.oo1.ejercicio14_IntervaloDeTiempo;
+package ar.edu.unlp.info.oo1.ejercicio17_Alquiler;
 
 public class DateLapse {
 	private java.time.LocalDate from;
@@ -38,7 +38,7 @@ public class DateLapse {
 	public boolean includesDate(java.time.LocalDate other) {
 		return other.isAfter(this.from) && other.isBefore(this.to);
 	}
-	public boolean overlaps(DateLapse otherPeriod) {
-		return otherPeriod.getFrom().isAfter(this.from) && otherPeriod.getTo().isBefore(this.to);
+	public boolean includesPeriod(DateLapse unPeriodo) {
+		return !(this.to.isBefore(unPeriodo.getFrom()) || this.from.isAfter(unPeriodo.getTo()));
 	}
 }
